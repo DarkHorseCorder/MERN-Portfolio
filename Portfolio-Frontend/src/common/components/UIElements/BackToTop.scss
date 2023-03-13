@@ -1,0 +1,41 @@
+@import '../../util/variables';
+
+.hide-back-to-top {
+  display: none;
+}
+
+.back-to-top {
+  display: block;
+  &__icon {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+
+    color: $color-primary-3;
+    font-size: 3rem;
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      right: 2rem;
+    }
+    @media screen and (min-width: $screen-lg) {
+      right: 20rem;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

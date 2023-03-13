@@ -1,0 +1,46 @@
+@use './common/util/mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+@import '~bootstrap/scss/bootstrap';
+@import './common/util/variables';
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1c1c1c;
+  color: $text-color-light;
+  line-height: 2;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  p,
+  em {
+    color: $p-color-dark;
+  }
+
+  .modal-content {
+    background-color: $color-secondary-2;
+  }
+
+  @include mixins.scrollbar($color-primary-1);
+}
+
+::selection {
+  background: $color-primary-1;
+  color: $text-color-light;
+}
+
+::-moz-selection {
+  background: $color-primary-1;
+  color: $text-color-light;
+}

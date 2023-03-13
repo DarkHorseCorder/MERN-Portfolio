@@ -1,0 +1,21 @@
+@import '../../../common/util/variables';
+
+.projects {
+  margin: 5%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      background: $color-primary-1;
+      border: none;
+
+      &:hover,
+      &:focus {
+        background: lighten($color-primary-1, 10%);
+      }
+    }
+  }
+}

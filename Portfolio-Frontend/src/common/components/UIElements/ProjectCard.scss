@@ -1,0 +1,68 @@
+@import '../../util/variables';
+
+.project-card {
+  .card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title {
+    white-space: nowrap;
+  }
+
+  &__image {
+    .placeholder {
+      height: 15rem;
+      border-radius: $border-radius-1;
+      @media (max-width: $screen-sm) {
+        height: 10rem;
+      }
+      @media (max-width: $screen-xs) {
+        height: 20rem;
+      }
+      @media (max-width: $screen-xss) {
+        height: 15rem;
+      }
+    }
+  }
+
+  &__details {
+    &__tech-stack {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0.5rem 0.2rem;
+      border-radius: $border-radius-2;
+      background: $color-primary-4;
+      img {
+        width: 10%;
+        height: auto;
+
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        @media screen and (max-width: $screen-sm) {
+          width: 20%;
+        }
+      }
+    }
+  }
+
+  &__links {
+    .col {
+      white-space: nowrap;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-color-light;
+      &:hover {
+        color: darken($text-color-light, 20%);
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: portfolio-server
+    image: portfolio-server
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 5000:5000
